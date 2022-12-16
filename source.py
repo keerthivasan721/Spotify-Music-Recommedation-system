@@ -7,6 +7,7 @@ warnings.filterwarnings("ignore")
 data = pd.read_csv("Dataset/preprocessed_data.csv")
 
 model_data = data.drop(columns= 'artist')
+model_data.drop_duplicates(subset=['track_name'], inplace = True)
 
 numerical = model_data.select_dtypes(exclude='object')
 
