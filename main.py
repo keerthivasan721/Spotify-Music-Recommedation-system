@@ -24,7 +24,7 @@ class SpotifyRecommendation():
         rec_sorted.reset_index(drop = True, inplace = True)
 
         columns = ['track_name']
-        print(rec_sorted[columns][:amount])
+        return rec_sorted[columns][:amount]
 
 
 recommendation = SpotifyRecommendation(model_data)
